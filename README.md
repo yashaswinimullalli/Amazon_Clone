@@ -1,1 +1,1 @@
-# Myntra_Clone
+# Amazon_Clone
