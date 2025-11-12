@@ -13,7 +13,7 @@ function changeSlide() {
 
 changeSlide();
 
-prev_btn.addEventListener('click', () => {
+prev_btn.addEventListener('click', (e) => {
     if (n > 0) {
         n--;
     } else {
@@ -22,7 +22,7 @@ prev_btn.addEventListener('click', () => {
     changeSlide();
 });
 
-next_btn.addEventListener('click', () => {
+next_btn.addEventListener('click', (e) => {
     if (n < imgs.length - 1) {
         n++;
     } else {
@@ -30,3 +30,13 @@ next_btn.addEventListener('click', () => {
     }
     changeSlide();
 });
+
+const scrollcontainer = documnt.querySelectorAll('.products');
+for(const item of scrollContainer){
+	item.addEventListener('Wheel',(evt)=>{
+		evt.preventDefault();
+		item.scrollLeft +=evt.deltaY;
+
+	});
+}
+
